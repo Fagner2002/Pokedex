@@ -40,13 +40,14 @@ $(document).ready(function () {
                 $.get(pokemonUrl, function (pokemonData) {
                     const name = pokemonData.name;
                     const imageUrl = pokemonData.sprites.front_default;
-                    const tipo = pokemonData.types;
-                    console.log(pokemonData);
-                    console.log(tipo);
+                    const types = pokemonData.types.map(function (typeData) {
+                        return typeData.type.name;
+                    }).join(", ");
 
                     // Criar o card do Pokémon
                     const card = `
                         <div class="card" style="width: 13rem;">
+                            <p class="card-type">${types}</p>
                             <img src="${imageUrl}" class="card-img-top" alt="${name}">
                             <div class="card-body">
                                 <h5 class="card-title">${name}</h5>
