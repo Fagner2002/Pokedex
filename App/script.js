@@ -75,7 +75,7 @@ $(document).ready(function () {
                     const types = pokemonData.types.map(function (typeData) {
                         return typeData.type.name;
                     });
-                    console.log(pokemon.id);
+                    console.log(pokemonData.id);
 
                     // Criar o card do Pokémon com classes CSS baseadas nos tipos
                     const card = `
