@@ -55,6 +55,11 @@ body {
     border: solid 2px purple;
 }
 
+.card-type-container {
+    border: solid 2px black;
+    display: flex;
+}
+
 .card-title {
     border: solid 2px purple;
 }
@@ -85,4 +90,44 @@ body {
 
 .normal-type {
     background-color: #A4ACAF;
+}
+
+.electric-type {
+    background-color: #EED535;
+}
+
+.ground-type {
+    background-color: #AB9842;
+}
+
+.fairy-type {
+    background-color: #FDB9E9;
+}
+
+.ice-type {
+    background-color: #51C4E7;
+}
+
+.psychic-type {
+    background-color: #F366B9;
+}
+
+.fighting-type {
+    background-color: #D56723;
+}
+
+.steel-type {
+    background-color: #9EB7B8;
+}
+
+.ghost-type {
+    background-color: #7B62A3;
+}
+
+.rock-type {
+    background-color: #A38C21;
+}
+
+.dragon-type {
+    background-color: #F16E57;
 }
