@@ -23,6 +23,7 @@ $(document).ready(function() {
 
 $(document).ready(function () {
     const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+    const regionMenu = $("#regionMenu");
 
     // Função para mapear os tipos para classes CSS correspondentes
     function mapTypeToCssClass(type) {
@@ -140,3 +141,20 @@ $(document).ready(function () {
 
     // ...
 });
+
+$(document).ready(function () {
+    // URL da API de Pokémon para obter as regiões
+    const apiUrl = "https://pokeapi.co/api/v2/region/";
+
+    // Seleciona o elemento onde as opções de região serão adicionadas
+    const regionMenu = $("#regionMenu");
+
+    // Faz a solicitação AJAX para obter as regiões de Pokémon
+    $.get(apiUrl, function (data) {
+        // Itera sobre as regiões e cria opções no dropdown
+        data.results.forEach(function (region) {
+            regionMenu.append(`<a class="dropdown-item" href="#">${region.name}</a>`);
+        });
+    });
+});
+
