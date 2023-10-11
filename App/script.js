@@ -105,12 +105,12 @@ $(document).ready(function () {
     
                     const card = `
                         <div class="card" style="width: 13rem;">
-                            <div class="card-type-container" style="width: 60px;">
-                                ${cardTypes}
-                            </div>
                             <img src="${imageUrl}" class="card-img-top" alt="${name}">
                             <div class="card-body">
                                 <h5 class="card-title">${name}</h5>
+                            </div>
+                            <div class="card-type-container"">
+                                ${cardTypes}
                             </div>
                         </div>
                     `;
