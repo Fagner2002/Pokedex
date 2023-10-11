@@ -95,7 +95,7 @@ $(document).ready(function () {
                     const types = pokemonData.types.map(function (typeData) {
                         return typeData.type.name;
                     });
-                    console.log(pokemonData.id);
+                    console.log(pokemonData);
     
                     // Criar o card do Pokémon com classes CSS baseadas nos tipos
                     const cardTypes = types.map(function (type) {
@@ -125,4 +125,18 @@ $(document).ready(function () {
 
     // Chamar a função para buscar e exibir os cards
     fetchAndDisplayPokemon();
+});
+
+$(document).ready(function () {
+    // ... Seu código existente ...
+
+    // Manipulador de eventos para abrir o modal quando um card é clicado
+    $("#pokemon-cards").on("click", ".card", function () {
+        const card = $(this);
+        const name = card.find(".card-title").text();
+        $("#pokemonName").text(name);
+        $("#pokemonModal").modal("show");
+    });
+
+    // ...
 });
